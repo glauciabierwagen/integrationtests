@@ -7,7 +7,7 @@ export const createDrink = (type) => {
 // Logs a preparation message and returns a random ticket number
 export const prepareOrder = (drink) => {
   console.log(`Preparing ${drink.type}...`);
-  const ticketNumber = Math.random() * 1000 + 1000; // BUG: returns a float above 999
+  const ticketNumber = Math.floor(Math.random() * 1000); // integer between 0–999
   return ticketNumber;
 };
 
